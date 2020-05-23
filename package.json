@@ -8,7 +8,8 @@
     "parcel:build": "parcel build src/index.html --public-url ./ --out-dir dist --no-source-maps --no-cache",
     "clean": "rimraf dist .cache .cache-loader",
     "dev": "npm-run-all clean parcel:dev",
-    "build": "npm-run-all clean parcel:build",
+    "build": "npm-run-all lint:style clean parcel:build",
+    "lint:style": "stylelint --fix '**/*.scss'",
     "test": "echo 'Everything is working as expected ✅\nStart working on your project by running \\033[1mnpm run dev\\033[0m'"
   },
   "repository": {
@@ -35,7 +36,8 @@
     "postcss-preset-env": "^6.7.0",
     "rimraf": "^2.7.1",
     "sass": "^1.25.0",
-    "stylelint-config-recommended": "^3.0.0",
+    "stylelint": "^13.5.0",
+    "stylelint-scss": "^3.17.2",
     "tailwindcss": "^1.4.6"
   },
   "dependencies": {}

@@ -1,5 +1,5 @@
 # DOCS
-## COnfiguració de l'entorn
+## Configuració de l'entorn
 
 - Clonar UOC Boilerplate
 
@@ -52,10 +52,10 @@ module.exports = {
 }
 ```
 
-- Instal·lar stylelint recommended config
+- Instal·lar stylelint i stylelint-scss
 
 ```
-npm install stylelint-config-recommended --save-dev
+npm install stylelint stylelint-scss --save-dev
 ```
 
 - Deshabilitar el lint integrat de VSCode i habilitar el de stylelint
@@ -65,20 +65,21 @@ npm install stylelint-config-recommended --save-dev
 "stylelint.enable": true, // Enable sytlelint
 ```
 
-- Fitxer de configuració .stylelintrc
+- Fitxer de configuració .stylelintrc.json
 
 ```json
 {
-  "extends": "stylelint-config-recommended",
+  "plugins": [
+    "stylelint-scss"
+  ],
   "rules": {
-    "at-rule-no-unknown": [ true, {
+    "at-rule-no-unknown": null,
+    "scss/at-rule-no-unknown": [true, {
       "ignoreAtRules": [
         "extends",
         "tailwind"
       ]
-    }],
-    "block-no-empty": null,
-    "unit-whitelist": ["em", "rem", "s"]
+    }]
   }
 }
 ```
