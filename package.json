@@ -1,6 +1,6 @@
 {
-  "name": "uoc-boilerplate",
-  "version": "2.4.0",
+  "name": "eines2-pac3",
+  "version": "1.0.0",
   "private": true,
   "description": "Boilerplate for Advanced HTML/CSS Tools UOC students",
   "scripts": {
@@ -13,17 +13,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/uoc-advanced-html-css/uoc-boilerplate.git"
+    "url": "git+https://github.com/jvmonjo/eines2-pac3.git"
   },
   "author": {
-    "name": "Jordi Tarrida",
-    "email": "jorditarrida@uoc.edu"
+    "name": "Josep V. Monjo",
+    "email": "josepmonjo@uoc.edu"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/uoc-advanced-html-css/uoc-boilerplate/issues"
+    "url": "https://github.com/jvmonjo/eines2-pac3/issues"
   },
-  "homepage": "https://github.com/uoc-advanced-html-css/uoc-boilerplate#readme",
+  "homepage": "https://github.com/jvmonjo/eines2-pac3#readme",
   "devDependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.8.4",
@@ -34,7 +34,9 @@
     "postcss-clean": "^1.1.0",
     "postcss-preset-env": "^6.7.0",
     "rimraf": "^2.7.1",
-    "sass": "^1.25.0"
+    "sass": "^1.25.0",
+    "stylelint-config-recommended": "^3.0.0",
+    "tailwindcss": "^1.4.6"
   },
   "dependencies": {}
 }

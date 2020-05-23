@@ -1,65 +1,84 @@
-# UOC Boilerplate
+# DOCS
+## COnfiguració de l'entorn
 
-UOC Boilerplate is a starter template for the Advanced HTML and CSS Tools course from the [Master's Program in Multimedia Applications](https://estudis.uoc.edu/ca/masters-universitaris/aplicacions-multimedia/presentacio) and the [Master's Program in Web App and Website Development](https://estudis.uoc.edu/ca/masters-universitaris/desenvolupament-llocs-aplicacions-web/presentacio) at the [Universitat Oberta de Catalunya](https://www.uoc.edu). It aims to provide a basic, modern frontend web development starter pack based on Parcel and including a Sass compiler, an ES6 transpiler, minifiers, an image optimizer, and development tools.
+- Clonar UOC Boilerplate
 
-This is the 2.0 version of UOC Boilerplate, available since the UOC 2018-2 semester.
+```
+git clone https://github.com/uoc-advanced-html-css/uoc-boilerplate.git
+```
 
+- Instal·lar tailwindcss
 
-## Requirements
+```
+npm install tailwindcss --save-dev
+```
 
-[Node.js](http://nodejs.org/) >= 10.15.x
+- Importar tailwindcss al main.scss
 
+```scss
+@tailwind base;
 
-## Getting started
+@tailwind components;
 
-Clone this repository with `git clone`, or download a .zip file using the top right green button.
+@tailwind utilities;
+```
 
-Using the Terminal, navigate to the project folder and run `npm install`.
+- Crear el fitxer de configuració de tailwind
 
+```
+npx tailwindcss init
+```
 
-## Features
+- Afegir tailwind a postcss.config.js
 
-* Uses [Parcel](https://parceljs.org) module bundler.
-* NPM scripts for fast development and production build (see Commands below).
+```js
+module.exports = {
+  plugins: [
+    // ...
+    require('tailwindcss')(),
+    // ...
+  ]
+}
+```
 
-### Stylesheets
+- Afegir l'opció de purga de css no usat als fitxers html (tailwind.comfig.js)
 
-* [Sass/SCSS](https://sass-lang.com) to CSS compilation.
-* [PostCSS](https://postcss.org/) features:
-    * Transpile modern CSS with [`postcss-preset-env`](https://preset-env.cssdb.org/features).
-    * Automatically add CSS prefix to unsupported properties with [`autoprefixer`](https://autoprefixer.github.io/).
-    * Automatically minify and optimize CSS code on production build with [`postcss-clean`](https://github.com/leodido/postcss-clean).
+```js
+module.exports = {
+  purge: [
+    './src/*.html'
+  ],
+  //...
+}
+```
 
-### Scripts
+- Instal·lar stylelint recommended config
 
-* Allow for modern JavaScript (ES201x/ES8/ES7/ES6…) which is automatically transpiled to ES5 and minifed in production builds, with [Babel](https://babeljs.io/).
+```
+npm install stylelint-config-recommended --save-dev
+```
 
-### Images
+- Deshabilitar el lint integrat de VSCode i habilitar el de stylelint
 
-* Image optimization with [`parcel-plugin-imagemin`](https://github.com/DeMoorJasper/parcel-plugin-imagemin), based on [`imagemin`](https://github.com/imagemin/imagemin), on production builds.
+```json
+"scss.validate": false, // Disable css built-in lint
+"stylelint.enable": true, // Enable sytlelint
+```
 
-### Development
+- Fitxer de configuració .stylelintrc
 
-* Development server launch and live reloading on file changes.
-* Friendly error reporting.
-
-
-## How to use this boilerplate
-
-Only edit files located in the `src/` folder. Always run the following commands during the development stage and for production builds. Please note that it is expected that all projects built with this boilerplate are compiled using `npm run build` before they are published.
-
-### Commands
-
-| Command | Description |
-|---------|-------------|
-| `npm run dev` | Runs a local web server for development and opens the browser to display it. Automatically compiles styles and scripts whenever a file in `src/` is changed, and live reloads the browser. This is what *must be run* on the development stage. |
-| `npm run build` | Compiles and minifies and optimizes the files in the assets folder. The generated compiled and optimized files are located in the `dist/` folder. This is what *must be run* before publishing the project. The publishable files are the ones located in the `dist/` folder. |
-| `npm run clean` | Deletes the current `/dist` folder. |
-| `npm run test` | Displays a success message if everything is working as expected. |
-
-
-## Need help? / Want to help out?
-
-Feel free to create a [new issue](https://github.com/uoc-advanced-html-css/uoc-boilerplate/issues/new/) or drop me a line at jorditarrida@uoc.edu.
-
-Are you using this Boilerplate for your projects or for educational purposes? I would love to hear about it!
+```json
+{
+  "extends": "stylelint-config-recommended",
+  "rules": {
+    "at-rule-no-unknown": [ true, {
+      "ignoreAtRules": [
+        "extends",
+        "tailwind"
+      ]
+    }],
+    "block-no-empty": null,
+    "unit-whitelist": ["em", "rem", "s"]
+  }
+}
+```
