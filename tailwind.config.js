@@ -4,6 +4,9 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      serif: ['Lobster Two', 'cursive']
+    }
   },
   variants: {},
   plugins: [],

@@ -9,28 +9,33 @@
   </head>
   <body class="x-hidden">
     <header>
-      <nav class="navbar navbar--border-bottom navbar-expand-lg navbar-light bg-white">
-        <a class="navbar-brand" href="index.html">Teatret</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="repartiment.html">Repartiment</a>
+      <nav class="flex items-center justify-between flex-wrap bg-white p-4 border-b">
+        <div class="flex items-center flex-shrink-0 mr-6">
+          <span class="font-semibold text-xl tracking-tight">Teatret</span>
+        </div>
+        <div class="block lg:hidden">
+          <button class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
+            <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+          </button>
+        </div>
+        <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto lg:text-right">
+          <ul class="lg:flex-grow">
+            <li href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 mr-4 text-gray-500">
+              <a href="repartiment.html">Repartiment</a>
             </li>
           </ul>
         </div>
       </nav>
+
     </header>
-    <main class="obra">
-      <article class="article">
-        <header class="article__header">
-          <h1 class="title">L’orfe del Clan dels Zhao. Un clàssic actual</h1>
-          <p class="subtitle">Albert Boadella</p>
+    <main>
+      <article>
+        <header class="bg-image-overlay p-6 flex flex-col items-center justify-center text-white h-64 min-h-full bg-cover bg-no-repeat bg-center" >
+          <h1 class="text-4xl font-serif font-bold">L’orfe del Clan dels Zhao. Un clàssic actual</h1>
+          <p class="text-xl">Albert Boadella</p>
         </header>
-        <div class="article__content">
-          <blockquote class="article__quote">
+        <div class="mx-auto md:max-w-xl mt-16 p-6">
+          <blockquote class="font-serif text-2xl italic mb-8">
             Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
           </blockquote>
           <p>
