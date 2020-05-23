@@ -83,3 +83,16 @@ npm install stylelint stylelint-scss --save-dev
   }
 }
 ```
+
+
+- Instal·lar fontawesome
+
+```
+npm install @fortawesome/fontawesome-free --save-dev
+```
+
+- Importar fontawesome des de main.js
+
+```js
+import '@fortawesome/fontawesome-free/js/all.min.js';
+```
