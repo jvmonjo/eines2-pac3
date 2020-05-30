@@ -96,3 +96,29 @@ npm install @fortawesome/fontawesome-free --save-dev
 ```js
 import '@fortawesome/fontawesome-free/js/all.min.js';
 ```
+
+## Desenvolupament
+S'ha seguit un enfocament mobile first, de manera que s'han aplicat els estils pensant en una pantalla petita i després s'han afegit modificadors en funció de pantalles més grans. Per exemple per ajustar l'amplada dels ítems a la pantalla:
+
+```html
+<li class="w-full sm:w-1/2 md:w-1/3">
+<!-- ... -->
+</li>
+```
+
+S'han extret els següents 4 components amb @apply:
+- 
+- 
+- 
+- 
+
+## Validació
+
+La web s'ha validat en els següents estàndards:
+
+- CSS3: https://jigsaw.w3.org/css-validator/ (algunes regles de bootstrap no validen)
+- HTML5: https://validator.w3.org/
+- Accessibility Review (Guidelines: WCAG 2.0 (Level AA)): https://achecker.ca/checker/index.php
+
+## Publicació i codi font
+La web s'ha publicat a https://eines2-pac3.netlify.app i el codi font està allotjat a https://github.com/jvmonjo/eines2-pac3
