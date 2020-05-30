@@ -116,7 +116,7 @@ S'han extret els següents 4 components amb @apply:
 
 La web s'ha validat en els següents estàndards:
 
-- CSS3: https://jigsaw.w3.org/css-validator/ (algunes regles de bootstrap no validen)
+- CSS3: https://jigsaw.w3.org/css-validator/ (algunes regles de tailwind no validen)
 - HTML5: https://validator.w3.org/
 - Accessibility Review (Guidelines: WCAG 2.0 (Level AA)): https://achecker.ca/checker/index.php
 
