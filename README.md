@@ -143,4 +143,5 @@ La web s'ha validat en els següents estàndards:
 - Accessibility Review (Guidelines: WCAG 2.0 (Level AA)): https://achecker.ca/checker/index.php
 
 ## Publicació i codi font
+
 La web s'ha publicat a https://eines2-pac3.netlify.app i el codi font està allotjat a https://github.com/jvmonjo/eines2-pac3
