@@ -130,6 +130,9 @@ S'han extret els següents components amb @apply. S'ha especificat al fitxer mai
 }
 ```
 
+## Millores de rendiment
+
+Seguint les recomanacions s'ha importat fontawesome des del CSS en lloc de des del JS per disminuir la mida del bundle.
 
 ## Validació
 
