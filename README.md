@@ -106,11 +106,30 @@ S'ha seguit un enfocament mobile first, de manera que s'han aplicat els estils p
 </li>
 ```
 
-S'han extret els següents 4 components amb @apply:
-- 
-- 
-- 
-- 
+S'han extret els següents components amb @apply. S'ha especificat al fitxer main.scss entre les importacions @tailwind components i @tailwind utilities, per a permetre l'adició d'utilitats de tailwind als nostres components:
+
+```scss
+.card {
+  @apply bg-white text-center border border-gray-200 mb-6;
+}
+
+.card__title {
+  @apply font-serif text-xl font-bold;
+}
+
+.page__title {
+  @apply font-serif text-4xl font-bold;
+}
+
+.article__header {
+  @apply bg-image-overlay p-6 flex flex-col items-center justify-center text-white h-64 min-h-full bg-cover bg-no-repeat bg-center;
+}
+
+.blockquote {
+  @apply font-serif text-2xl italic mb-8;
+}
+```
+
 
 ## Validació
 
